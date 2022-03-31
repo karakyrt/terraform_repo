@@ -14,13 +14,3 @@ data "aws_ami" "amazon_linux_2" {
     values = ["x86_64"]
   }
 }
-
-//2. This is second approach how to Fetching the Data, but now I will do: Fetching the Data from Files, now we never use userdata.sh anymore
-
-data "template_file" "user_data" {
-  template = file("userdata.sh")
-  vars = {
-    environment = var.env
-  }
-}
-//this data_source.tf works with variables.tf

@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  count = var.number_of_ec2
+  count                  = var.number_of_ec2
 
   //ami                  = var.ami------I don't need this anymore(variables) I will be using Content and Filters from data_source.tf also will do References to ec2.tf
 
